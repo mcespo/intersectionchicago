@@ -10,7 +10,7 @@ ul {
 nav ul li {
 	display: inline-block;
 }
-.header, .article, .footer {
+.article, .footer {
 	margin: 0 auto;
 	width: 80vw;
 	@media #{$small} {

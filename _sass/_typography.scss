@@ -4,30 +4,43 @@ html, body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: $font;
-    font-size: $font-size;
+    font-family: $font-serif;
+    font-size: ms(1);
+    line-height: ms(1);
     font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: $font-sans;
+}
+
+h1 {
+    font-size: ms(4);
+    line-height: ms(0);
+}
+
+h2 {
+    font-size: ms(3);
+    line-height: ms(-1);
+    margin: ms(0) 0 ms(-2) 0;
 }
 
 strong, b, .strong {
     font-weight: 700;
 }
 
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
 p {
-    margin: 0 0 1.75rem 0;
-    line-height: 130%;
-    letter-spacing: -0.03rem;
-    font-size: 1.25rem;
-    @media #{$small} {
-        font-size: 1.35rem;
-    }
-    @media #{$medium} {
-        font-size: 1.45rem;
-    }
-    @media #{$large} {
-        font-size: 1.55rem;
-    }
+    // @media #{$small} {
+    // }
+    // @media #{$medium} {
+    // }
+    // @media #{$large} {
+    // }
 }
