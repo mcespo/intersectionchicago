@@ -1,0 +1,33 @@
+// font sizes fariables and other adjustments can be found in the variables file.
+
+html, body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $font;
+    font-size: $font-size;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+strong, b, .strong {
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 1.75rem 0;
+    line-height: 130%;
+    letter-spacing: -0.03rem;
+    font-size: 1.25rem;
+    @media #{$small} {
+        font-size: 1.35rem;
+    }
+    @media #{$medium} {
+        font-size: 1.45rem;
+    }
+    @media #{$large} {
+        font-size: 1.55rem;
+    }
+}

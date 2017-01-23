@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="article">
+    <h1>Posts</h1>
+    <p>I occasionally write things about the web and myself. As of early 2016, I am slowly getting acclimated to using <a href="https://jekyllrb.com/" title="Jekyll!">Jekyll</a> as a means to publish content. I intend to progressively make improvements to the layout as I become more familiar with using this library. Until then, please enjoy...</p>
+    <ul class="lists">
+    {% for post in site.posts %}
+      <li><h2>{{ post.date | date: '%b %d, %Y' }} - <a href="{{ post.url }}">{{ post.title }}</a></h2></li>  
+    {% endfor %}
+    </ul>
+</article>

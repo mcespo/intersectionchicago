@@ -1,20 +1,19 @@
-# Site settings
-title: Intersection
-tagline: "Changing the world, one uninspired quote at a time"
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+title: Intersection Chicago
+email: mcespo@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "www.intersectionchicago.org" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Social
-socialimg: /img/social.jpg # be sure to change this image
-facebook: fbusername
-twitter: twusername
-github: ghusername
-googleplus: gusername
-instagram: igusername
+# Build settings
+markdown: kramdown
 
-# Contact
+gems:
+  - jekyll-feed
 
-# Use this for production
-#sass:
-#    style: :compressed
+exclude:
+  - Gemfile
+  - Gemfile.lock
 
-exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+sass:
+  style: :compressed
