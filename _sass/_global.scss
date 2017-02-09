@@ -10,6 +10,12 @@ ul {
 nav ul li {
 	display: inline-block;
 }
+a, a:active, a:visited{
+	color: $color-red;
+	&:hover {
+		color: darken($color-red, 20%);
+	}
+}
 .article, .footer {
 	margin: 0 auto;
 	width: 80vw;
@@ -17,7 +23,7 @@ nav ul li {
 		width: 75vw;
 	}
 	@media #{$large} {
-		width: 700px;
+		width: 680px;
 	}
 }
 

@@ -25,7 +25,15 @@
 			max-width: 1200px;
 		}
 		.main-nav {
-			font-size: 1.25rem;
+			font-size: ms(-1);
+			text-transform: capitalize;
+			a, a:active, a:visited{
+				color: $color-white;
+				text-decoration: none;
+				&:hover {
+					color: darken($color-white, 50%);
+				}
+			}
 			li:not(:last-child) {
 				margin-right: 1rem;
 			}

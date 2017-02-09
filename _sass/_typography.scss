@@ -6,7 +6,7 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
     font-family: $font-serif;
     font-size: ms(1);
-    line-height: ms(1);
+    line-height: ms(2);
     font-weight: 400;
 }
 
@@ -20,9 +20,9 @@ h1 {
 }
 
 h2 {
-    font-size: ms(3);
-    line-height: ms(-1);
-    margin: ms(0) 0 ms(-2) 0;
+    font-size: ms(2);
+    line-height: ms(0);
+    margin: ms(5) 0 ms(2) 0;
 }
 
 strong, b, .strong {
@@ -37,6 +37,7 @@ strong, b, .strong {
 }
 
 p {
+    margin: ms(2) 0;
     // @media #{$small} {
     // }
     // @media #{$medium} {
