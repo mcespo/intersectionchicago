@@ -10,7 +10,7 @@ ul {
 nav ul li {
 	display: inline-block;
 }
-a, a:active, a:visited{
+a, a:active, a:visited {
 	color: $color-red;
 	&:hover {
 		color: darken($color-red, 20%);
@@ -24,6 +24,25 @@ a, a:active, a:visited{
 	}
 	@media #{$large} {
 		width: 680px;
+	}
+}
+
+.nav {
+	&--header {
+		font-family: $font-sans;
+		font-weight: 700;
+		font-size: ms(-1);
+		text-transform: capitalize;
+		a, a:active, a:visited{
+			color: $color-white;
+			text-decoration: none;
+			&:hover {
+				color: darken($color-white, 50%);
+			}
+		}
+		li:not(:last-child) {
+			margin-right: 1rem;
+		}
 	}
 }
 

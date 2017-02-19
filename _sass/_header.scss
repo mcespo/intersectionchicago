@@ -1,5 +1,3 @@
-.text-logo {
-}
 .header {
 	background: darken($color-blue, 12%); /* Old browsers */
 	background: -moz-linear-gradient(45deg, $color-blue 0%, $color-red 100%);
@@ -16,6 +14,7 @@
 		max-height: 700px;
 	}
 	&__nav {
+		// nav UL styles can be found in global.scss
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -23,20 +22,6 @@
 		margin: 0 auto;
 		@media #{large} {
 			max-width: 1200px;
-		}
-		.main-nav {
-			font-size: ms(-1);
-			text-transform: capitalize;
-			a, a:active, a:visited{
-				color: $color-white;
-				text-decoration: none;
-				&:hover {
-					color: darken($color-white, 50%);
-				}
-			}
-			li:not(:last-child) {
-				margin-right: 1rem;
-			}
 		}
 	}
 }
