@@ -16,7 +16,7 @@ a, a:active, a:visited {
 		color: darken($color-red, 20%);
 	}
 }
-.article, .footer {
+.article, .donate, .footer {
 	margin: 0 auto;
 	width: 80vw;
 	@media #{$small} {
