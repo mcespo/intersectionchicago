@@ -39,6 +39,9 @@ a, a:active, a:visited {
 			&:hover {
 				color: darken($color-white, 50%);
 			}
+			&.active {
+				text-decoration: underline;
+			}
 		}
 		li:not(:last-child) {
 			margin-right: 1rem;

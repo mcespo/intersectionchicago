@@ -35,9 +35,12 @@
         <nav class="header__nav">
             <svg ariahidden class="intersection-logo_white"><use xlink:href="#intersection-logo_white" /></svg>
             <ul class="nav nav--header">
-                {% comment %} TODO add the liquid conditional code for navigation ..or rails {% endcomment %}
-                <li><a href="/">home</a></li>
-                <li><a href="/posts">posts</a></li>
+                {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+                {% for p in navigation_pages %}
+                    {% if p.navigation_weight %}
+                        <li><a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </nav>
     </header>
