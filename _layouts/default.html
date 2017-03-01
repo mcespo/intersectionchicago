@@ -42,14 +42,28 @@
                 <li><a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a></li>
                 {% endif %}
             {% endfor %}
-                <li><a href="https://goo.gl/ggcqIR" title="donate to Intersection" target="_blank">donate</a></li>
+                <li><a href="#donation-link" title="donate to Intersection">donate</a></li>
             </ul>
         </nav>
     </header>
     {{ content }}
     <section class="donate">
         <p>Intersection is finalizing documentation to be established as a US recognized non-profit organization. Until then, donations to our organization are not currently tax deductable. Our donations page is maintained by a PNC Bank. Please be aware that you will be redirected to an external site to ensure a secure transaction.</p>
-        <a class="button" href="https://goo.gl/ggcqIR" title="donate to Intersection" target="_blank">Donate</a>
+        <div id="donation-link" id="cp2c20020156" onclick="document.getElementById('pay_now_form_7d348ada5e').submit()">
+            <form action="https://checkout.globalgatewaye4.firstdata.com/pay" id="pay_now_form_7d348ada5e" method="post">
+                <input type="hidden" name="x_login" value="WSP-INTER-SHZzIgCGYw" />
+                <input type="hidden" name="x_show_form" value="PAYMENT_FORM" />
+                <input type="hidden" name="x_fp_sequence" value="14883345482783196647" />
+                <input type="hidden" name="x_fp_hash" value="PNB-1.0-3d1f23610a33d619382cc40a9c4aca4235412392" />
+                <input type="hidden" name="x_amount" value="" />
+                <input type="hidden" name="x_currency_code" value="USD" />
+                <input type="hidden" name="x_test_request" value="FALSE" />
+                <input type="hidden" name="x_relay_response" value="" />
+                <input type="hidden" name="donation_prompt" value="" />
+                <input type="hidden" name="button_code" value="Donate Intersection" />
+                <button type="button" title="donate to Intersection" class="button">Donate</button>
+            </form>
+        </div>
     </section>
     <footer class="footer">
         <!--<svg aria-hidden="true" class=""><use xlink:href="#intersection-logo_star" /></svg>-->

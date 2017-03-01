@@ -15,3 +15,16 @@ $color-grey: rgb(173,172,171);
 $color-white: rgb(244,243,242);
 $color-red: rgb(144,22,27);
 $color-blue: rgb(23,181,218);
+
+@keyframes hoverButton {
+    0% {
+        border-color: $color-black;
+        color: $color-black;
+		box-shadow: -7px 11px 4px 0px $color-grey;
+    }
+    100% {
+        border-color: $color-blue;
+        color: $color-blue;
+		box-shadow: -5px 6px 0px 0px $color-grey;
+    }
+}

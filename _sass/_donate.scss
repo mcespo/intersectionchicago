@@ -8,10 +8,10 @@
     flex-direction: column;
 	.button {
 		display: inline-block;
-		background: #17B5DA;
+		background: $color-white;
     	text-transform: uppercase;
-    	color: #ffffff;
-    	border: solid 4px #90161B;
+    	color: $color-black;
+    	border: solid 4px $color-black;
     	margin-top: 0.85rem;
     	padding: 0.95rem 0.75rem;
     	font-size: 2rem;
@@ -19,5 +19,11 @@
     	font-weight: 700;
     	text-decoration: none;
     	word-break: break-all;
+		box-shadow: -7px 11px 4px 0px $color-grey;
+		&:hover {
+			animation: hoverButton 500ms forwards;
+			color: $color-blue;
+			border: solid 4px $color-blue;
+		}
 	}
 }
