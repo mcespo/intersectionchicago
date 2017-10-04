@@ -3,17 +3,24 @@ html, body {
 	background-color: $color-white;
 }
 ul {
+	display: flex;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	@media #{$medium} {
+		flex-direction: row;
+	}
 }
 nav ul li {
 	display: inline-block;
 }
 a, a:active, a:visited {
 	color: $color-red;
+	text-decoration: none;
+	border-bottom: 1px solid $color-red;
+	transition: border 100ms ease-in-out;
 	&:hover {
-		color: darken($color-red, 20%);
+		border-bottom: 3px solid $color-red;
 	}
 }
 .article, .donate, .footer {
@@ -35,12 +42,12 @@ a, a:active, a:visited {
 		text-transform: capitalize;
 		a, a:active, a:visited{
 			color: $color-white;
-			text-decoration: none;
+			border-bottom: 1px solid $color-white;
 			&:hover {
-				color: darken($color-white, 50%);
+				border-bottom: 3px solid $color-white;
 			}
 			&.active {
-				text-decoration: underline;
+				border-bottom: 3px solid $color-white;
 			}
 		}
 		li:not(:last-child) {
@@ -48,4 +55,3 @@ a, a:active, a:visited {
 		}
 	}
 }
-

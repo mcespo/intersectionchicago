@@ -16,11 +16,15 @@
 	&__nav {
 		// nav UL styles can be found in global.scss
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		width: 80vw;
 		margin: 0 auto;
-		@media #{large} {
+		@media #{$medium} {
+			flex-direction: row;
+		}
+		@media #{$large} {
 			max-width: 1200px;
 		}
 	}

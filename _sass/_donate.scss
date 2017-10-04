@@ -1,6 +1,19 @@
+.newsletter {
+	#mc_embed_signup {
+		h2 {
+			font-size: ms(2);
+		  line-height: ms(0);
+		  margin: ms(5) 0 ms(2) 0;
+		}
+		form {
+			padding: 0;
+		}
+	}
+}
+
 .donate {
 	margin-top: 4rem;
-	border-top: 1px solid #000;
+	border-top: 1px solid $color-black;
 	font-size: 0.85em;
 	line-height: 1.35;
     display: flex;
@@ -8,10 +21,10 @@
     flex-direction: column;
 	.button {
 		display: inline-block;
-		background: #17B5DA;
+		background: $color-blue;
     	text-transform: uppercase;
-    	color: #ffffff;
-    	border: solid 4px #90161B;
+    	color: $color-white;
+    	border: solid 4px $color-blue;
     	margin-top: 0.85rem;
     	padding: 0.95rem 0.75rem;
     	font-size: 2rem;
@@ -19,5 +32,10 @@
     	font-weight: 700;
     	text-decoration: none;
     	word-break: break-all;
+			transition: all 300ms ease-in-out;
+			&:hover {
+				background-color: darken($color-blue, 5%);
+				box-shadow: 2px 2px 2px 1px rgba(20, 20, 20, 0.3)
+			}
 	}
 }
