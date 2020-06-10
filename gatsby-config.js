@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: `https://intersectionchicago.us8.list-manage.com/subscribe/post?u=a69928549db042fb4b22a6cdd&id=0dcca60333`,
+        timeout: 3500,
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -24,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-55356396-2",
+        trackingId: `UA-55356396-2`,
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is optional

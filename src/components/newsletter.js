@@ -1,47 +1,88 @@
-import React from "react"
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import React, { useState } from "react"
+import styled from "@emotion/styled"
+import Button from "./button"
+// import Modal from "./modal"
 
 export default function Newsletter() {
+  const [values, setValues] = useState({
+    EMAIL: "",
+    FNAME: "",
+    LNAME: "",
+  })
+  const handleSubmit = e => {
+    e.preventDefault()
+    addToMailchimp(values.EMAIL, { FNAME: values.FNAME, LNAME: values.LNAME })
+      .then(response => {
+        alert(response.msg)
+      })
+      .catch(error => {
+        alert(error)
+      })
+  }
+  const handleInputChange = event => {
+    setValues({ ...values, [event.target.name]: event.target.value })
+  }
   return (
-    <section>
-      <link
-        href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
-        rel="stylesheet"
-        type="text/css"
-      ></link>
-      <article class="article" id="mc_embed_signup">
-        <h2>Subscribe to our mailing list</h2>
-        <form
-          action="//humanlibrarychicago.us8.list-manage.com/subscribe/post?u=a69928549db042fb4b22a6cdd&amp;id=0dcca60333"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          className="validate"
-          target="_blank"
-          novalidate
-        >
-          <div id="mc_embed_signup_scroll">
-            <div className="mc-field-group">
-              <label for="mce-EMAIL">Email Address  <span className="asterisk">*</span></label>
-              <input type="email" value="" name="EMAIL" className="required email" id="mce-EMAIL">
-            </div>
-            <div className="mc-field-group">
-              <label for="mce-FNAME">First Name  <span className="asterisk">*</span></label>
-              <input type="text" value="" name="FNAME" className="required" id="mce-FNAME">
-            </div>
-          <div className="mc-field-group">
-          	<label for="mce-LNAME">Last Name </label>
-          	<input type="text" value="" name="LNAME" className="" id="mce-LNAME">
-          </div>
-          <div className="indicates-required"><span className="asterisk">*</span> indicates required</div>
-        	<div id="mce-responses" className="clear">
-        		<div className="response" id="mce-error-response" style="display:none"></div>
-        		<div className="response" id="mce-success-response" style="display:none"></div>
-        	</div>
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a69928549db042fb4b22a6cdd_0dcca60333" tabindex="-1" value=""></div>
-          <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-        </div>
-        </form>
-      </article>
-    </section>
+    <form onSubmit={handleSubmit}>
+      <Div>
+        <label htmlFor="email">
+          Email Address
+          <input
+            id="email"
+            placeholder="Enter email address"
+            aria-label="Email Address"
+            name="EMAIL"
+            type="text"
+            onChange={handleInputChange}
+          />
+        </label>
+
+        <label htmlFor="firstname">
+          First Name
+          <input
+            id="firstname"
+            type="text"
+            placeholder="Enter first name"
+            aria-label="First Name"
+            name="FNAME"
+            onChange={handleInputChange}
+          />
+        </label>
+
+        <label htmlFor="lastname">
+          Last Name
+          <input
+            id="lastname"
+            type="text"
+            placeholder="Enter last name"
+            aria-label="Last Name"
+            name="LNAME"
+            onChange={handleInputChange}
+          />
+        </label>
+
+        <Button text="Subscribe" type="submit" />
+      </Div>
+      {/* <Modal title={response.result} text={response.msg} /> */}
+    </form>
   )
 }
+
+const Div = styled.div`
+  display: grid;
+  flex-direction: column;
+  input {
+    display: block;
+    width: 100%;
+    border: 1px solid #abb0b2;
+    border-radius: 3px;
+    margin: 0.35em 0 0.65em;
+    padding: 8px 0;
+    text-indent: 2%;
+  }
+  button {
+    margin: 0.5em 0 1em;
+    max-width: 150px;
+  }
+`

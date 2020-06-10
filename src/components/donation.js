@@ -77,12 +77,18 @@ export default function Donation() {
             value=""
           />
           <input
+            aria-hidden="true"
             type="hidden"
             name="button_code"
             value="Donate to Intersection"
           />
           <div className="cpwrap">
-            <Button text="Donate" onPress={submitForm} />
+            <Button
+              alternate
+              text="Donate"
+              type="button"
+              clickEvent={submitForm}
+            />
           </div>
         </form>
       </div>

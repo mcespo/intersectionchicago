@@ -18,11 +18,17 @@ export default function Header() {
 
 const StyledHeader = styled.header`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
   align-items: center;
   padding: 0 5vw;
-  height: 100px;
   z-index: 5;
-  justify-content: space-between;
+  @media (min-width: 800px) {
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+  }
   a {
     display: inline-block;
   }

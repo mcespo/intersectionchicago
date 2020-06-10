@@ -14,7 +14,3 @@ const StyledFooter = styled.footer`
   font-size: 0.7em;
   margin: 5em 0 3em;
 `
-// .slide:hover,
-// .slide:focus {
-//   box-shadow: inset 6.5em 0 0 0 var(--hover);
-// }

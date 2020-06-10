@@ -1,0 +1,15 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks"
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs"
+import Button from "./button"
+
+<Meta title="Intersection Chicago Design | Buttons" component={Button} />
+
+# Primary Button
+
+Buttons are for user-initiated actions. Used to have the user take action.
+
+<Preview withToolbar>
+  <Story name="Button">
+    <Button clickEvent={() => alert("hey")} text="Hello" />
+  </Story>
+</Preview>
